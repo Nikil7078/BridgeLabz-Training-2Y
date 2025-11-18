@@ -1,0 +1,17 @@
+import java.util.*;
+class ChocolateDivision {
+    public static int[] divide(int chocolates, int children) {
+        int rem = chocolates % children;
+        int quo = chocolates / children;
+        return new int[]{rem, quo};
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int chocolates = sc.nextInt();
+        int children = sc.nextInt();
+        int[] r = divide(chocolates, children);
+        System.out.println("Each child gets = " + r[1]);
+        System.out.println("Remaining = " + r[0]);
+    }
+}
+

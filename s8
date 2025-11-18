@@ -1,0 +1,15 @@
+import java.util.*;
+class QuotientRemainder {
+    public static int[] find(int number, int divisor) {
+        int rem = number % divisor;
+        int quo = number / divisor;
+        return new int[]{rem, quo};
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int div = sc.nextInt();
+        int[] r = find(num, div);
+        System.out.println("Remainder = " + r[0] + " Quotient = " + r[1]);
+    }
+}
